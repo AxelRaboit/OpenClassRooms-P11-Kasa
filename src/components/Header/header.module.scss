@@ -1,8 +1,13 @@
+@import '../../../src/variables';
+
 header {
+    margin-bottom: 2rem;
+}
+
+.headerContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
 
     .headerLogo {
         height: 2.5rem;
@@ -20,12 +25,12 @@ header {
         }
 
         a {
-            font-size: 1.5rem;
+            font-size: var(--fs-500);
             font-weight: 500;
             text-transform: uppercase;
 
             @media (max-width: 768px) {
-                font-size: 0.75rem;
+                font-size: var(--fs-200);
             }
         }
     }

@@ -12,8 +12,17 @@
     }
 }
 
+main {
+    min-height: 100vh;
+}
+
 html {
-    margin: 2rem 0;
+    margin-top: 2rem;
+}
+
+body {
+    line-height: 1.5;
+    color: var(--black-color);
 }
 
 ul li {
@@ -22,15 +31,15 @@ ul li {
 
 ul li a {
     text-decoration: none;
-    color: $primary;
+    color: var(--main-color);
 
     &:hover {
         text-decoration: underline;
     }
+}
 
-    .active {
-        text-decoration: underline;
-    }
+a.active {
+    text-decoration: underline;
 }
 
 img {
@@ -38,17 +47,16 @@ img {
     height: auto;
 }
 
-body {
-    line-height: 1.5;
-    color: $black;
-    margin: 0 2rem;
-
-    @media (max-width: 768px) {
-        margin: 0 1rem;
-    }
-}
-
-.container {
-    max-width: 1750px;
+@mixin make-container($padding-x: $container-padding-x) {
+    /* width: 100%; */
+    max-width: 1440px;
     margin: 0 auto;
-}
+    padding-right: $padding-x;
+    padding-left: $padding-x;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .container {
+    @include make-container();
+  }

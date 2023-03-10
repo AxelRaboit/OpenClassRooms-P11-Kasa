@@ -6,7 +6,7 @@ export const Banner = ({ image, title }) => {
             <div className={style.bannerImageContainer}>
                 <img className={style.bannerImage} src={image} alt={title} />
             </div>
-            <h1 className={style.bannerTitle}>{title}</h1>
+            {image && <h1 className={style.bannerTitle}>{title}</h1>}
         </div>
     )
 }

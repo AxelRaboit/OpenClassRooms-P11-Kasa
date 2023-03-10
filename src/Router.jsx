@@ -1,20 +1,31 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home, About, Accommodation, NotFound } from './pages';
-import { Header } from './components';
+import { Header, Footer } from './components';
 import { Layout } from './layout';
 
-export function Router() {
+export function Router({ data, loading, error }) {
     return (
-        <Layout>
+        <>
             <BrowserRouter>
-                <Header />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/accommodation" element={<Accommodation />} />
-                    <Route path="*" element={<NotFound />} />
-                </Routes>
+                <main>
+                    <Header />
+                    <Layout>
+                        <Routes>
+                            <Route path="/" element={<Home data={data} loading={loading} error={error} />} />
+                            <Route path="/a-propos" element={<About />} />
+                            {data?.map(item => (
+                                <Route
+                                    key={item.id}
+                                    path={`/hebergement/${item.id}`}
+                                    element={<Accommodation data={item} />}
+                                />
+                            ))}
+                            <Route path="*" element={<NotFound />} />
+                        </Routes>
+                    </Layout>
+                </main>
+                <Footer />
             </BrowserRouter>
-        </Layout>
+        </>
     );
 }
