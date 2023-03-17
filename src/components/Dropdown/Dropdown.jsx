@@ -1,7 +1,7 @@
 import style from './dropdown.module.scss';
 import { useState } from 'react';
 
-export const Dropdown = ({ title, content }) => {
+export const Dropdown = ({ title, content, className }) => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -13,7 +13,7 @@ export const Dropdown = ({ title, content }) => {
     const arrowDirection = isOpen ? 'down' : 'up';
 
     return (
-        <div className={style.dropdownContainer}>
+        <div className={`${style.dropdownContainer} ${className}`}>
             <div className={style.dropdownWrap} onClick={toggleDropdown}>
                 <div className={style.dropdownHeader}>
                     <span>{title}</span>

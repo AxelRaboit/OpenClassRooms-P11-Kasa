@@ -1,0 +1,42 @@
+.containerDropdowns {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+    }
+    
+    .containerWrapDropdown {
+        width: 45%;
+        list-style-type: none;
+
+        @media (max-width: 480px) {
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+/* .containerDropdowns {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .dropdownContainer {
+    width: 47%;
+  }
+  
+
+  @media (max-width: 480px) {
+    .dropDownContainer {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .dropdownContainer {
+      width: 100%;
+    }
+  }
+   */
