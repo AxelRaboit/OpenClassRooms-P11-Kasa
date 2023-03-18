@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import style from './HostTags.module.scss';
 
 export const HostTags = ({tags}) => {
@@ -9,3 +10,7 @@ export const HostTags = ({tags}) => {
     </div>
   );
 }
+
+HostTags.propTypes = {
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+};

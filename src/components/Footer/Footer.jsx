@@ -1,7 +1,7 @@
 import style from './footer.module.scss';
 import Logo from '../../assets/images/footer-logo.png';
 
-export const Footer = ({ image, title }) => {
+export const Footer = () => {
     return (
         <footer className={style.container}>
             <img className={style.footerLogo} src={Logo} />

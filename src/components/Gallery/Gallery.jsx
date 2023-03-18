@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import style from './gallery.module.scss';
 import { NavLink } from 'react-router-dom';
 
@@ -14,3 +15,13 @@ export const Gallery = ({ data }) => {
 
     return <div className={style.cardsContainer}>{cardsList}</div>;
 }
+
+Gallery.propTypes = {
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            title: PropTypes.string.isRequired,
+            cover: PropTypes.string.isRequired,
+        })
+    ),
+};

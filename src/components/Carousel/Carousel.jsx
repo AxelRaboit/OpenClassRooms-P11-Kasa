@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import style from './carousel.module.scss';
 import { useState } from 'react';
 
@@ -38,3 +39,10 @@ export const Carousel = ({ data }) => {
         </div>
     )
 }
+
+Carousel.propTypes = {
+    data: PropTypes.shape({
+        pictures: PropTypes.arrayOf(PropTypes.string.isRequired),
+        description: PropTypes.string.isRequired,
+    }).isRequired
+};
