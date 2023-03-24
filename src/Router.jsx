@@ -7,8 +7,8 @@ export function Router({ data, loading, error }) {
     return (
         <>
             <BrowserRouter>
+                <Header />
                 <main>
-                    <Header />
                     <Layout>
                         <Routes>
                             <Route path="/" element={<Home data={data} loading={loading} error={error} />} />

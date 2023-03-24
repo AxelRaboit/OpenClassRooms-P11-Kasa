@@ -24,9 +24,9 @@ export const Header = () => {
                             </li>
                             <li>
                                 <NavLink to="/a-propos"
-                                className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "active" : ""
-                                }
+                                    className={({ isActive, isPending }) =>
+                                        isPending ? "pending" : isActive ? "active" : ""
+                                    }
                                 >A Propos</NavLink>
                             </li>
                         </ul>
