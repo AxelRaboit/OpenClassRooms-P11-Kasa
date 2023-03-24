@@ -23,7 +23,11 @@ export const Header = () => {
                                 >Accueil</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/a-propos">A Propos</NavLink>
+                                <NavLink to="/a-propos"
+                                className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "active" : ""
+                                }
+                                >A Propos</NavLink>
                             </li>
                         </ul>
                     </nav>

@@ -54,8 +54,8 @@ img {
     padding-left: $padding-x;
     margin-right: auto;
     margin-left: auto;
-  }
-  
-  .container {
+}
+
+.container {
     @include make-container();
-  }
+}
