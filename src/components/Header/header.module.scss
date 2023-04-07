@@ -22,12 +22,12 @@ header {
 
         @media (max-width: 768px) {
             margin-left: 1rem;
+            text-transform: uppercase;
         }
 
         a {
             font-size: var(--fs-500);
             font-weight: 500;
-            text-transform: uppercase;
 
             @media (max-width: 768px) {
                 font-size: var(--fs-200);

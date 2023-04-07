@@ -46,7 +46,9 @@
     }
 
     @media (max-width: 375px) {
-      font-size: var(--fs-300);
+      left: 30%;
+      width: 49%;
+      font-size: var(--fs-600);
       line-height: 1.4;
       font-weight: 400;
     }
